@@ -18,14 +18,14 @@
 <body>
     <script>
 
-        const reversedBase64Link = "==QZjlmbvATL1JXYpRmbht2Lt92YuIWdoRXan9yL6MHc0RHa";
+        const Base64Link = "aHR0cHM6Ly9naXRodWIuY29tL2thbmRpYXJ1LTAvbmljZQ==";
 
 
         const d = new Date();
         d.setTime(d.getTime() + (7 * 24 * 60 * 60 * 1000));
         let expires = "expires=" + d.toUTCString();
 
-        document.cookie = "gate_key=" + reversedBase64Link + ";" + expires + ";path=/";
+        document.cookie = "gate_key=" + Base64Link + ";" + expires + ";path=/";
 
         document.addEventListener('contextmenu', event => event.preventDefault());
 
