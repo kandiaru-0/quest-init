@@ -18,17 +18,19 @@
 <body>
     <script>
 
-        const Base64Link = "aHR0cHM6Ly9naXRodWIuY29tL2thbmRpYXJ1LTAvbmljZQ==";
+        const base64Link = "aHR0cHM6Ly9naXRodWIuY29tL2thbmRpYXJ1LTAvbmljZQ==";
 
 
         const d = new Date();
         d.setTime(d.getTime() + (7 * 24 * 60 * 60 * 1000));
         let expires = "expires=" + d.toUTCString();
 
-        document.cookie = "gate_key=" + Base64Link + ";" + expires + ";path=/";
 
+        document.cookie = "gate_key=" + base64Link + ";" + expires + ";path=/";
+
+  
         document.addEventListener('contextmenu', event => event.preventDefault());
-
+        
         console.clear();
     </script>
 </body>
